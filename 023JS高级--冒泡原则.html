@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冒泡机制</title>
+    <script src="023JS高级--冒泡机制.js"></script>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>冒泡机制</h1>
+    <p>概念：当一个元素上的事件被触发的时候，比如说鼠标点击了一个按钮，同样的事件会将在那个元素的所有祖先事件
+    中先触发。这一过程就称做事件冒泡![从子元素-----冒泡到父亲盒子 执行事件]</p>
+    <p>与之相对的是捕获  分发事件  addEventListener(fun(),true)</p>
+    <p><span style="color: red;font-weight: 600">不是所有的事件都是冒泡</span>
+        以下事件不冒泡： blur，focus,load,unload,onmouseenter onmouseleave
+    </p>
+    <div style="width: 50px;height: 50px;background: red;margin-top: 20px;margin-left: 20px"
+          id="box">
+    </div>
+</body>
+</html>

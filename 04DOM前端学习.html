@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM前端学习</title>
+    <script src="04DOM_前端学习.js"></script>
+    <style type="text/css">
+        body,ul,li,a,img{
+            margin: 0;
+            padding: 0;
+        }
+
+        .father{
+            height: 60px;
+        }
+
+        .boxEvent{
+            width: 60px;
+            height: 60px;
+            background: pink;
+            border: 1px black solid;
+            float: left;
+        }
+
+        .boxEvent2{
+            margin-left: 40px;
+            width: 60px;
+            height: 60px;
+            background: green;
+            border: 1px black solid;
+            float: left;
+        }
+
+        .top-banner{
+            background: pink;
+            height: 100px;
+        }
+
+        .w{
+            width:1000px;
+            height: 80px;
+            margin: 10px auto;
+            background-color: blue;
+            position: relative;
+        }
+
+        .w img{
+          width: 1000px;
+            height: 80px;
+        }
+
+        a{
+            text-decoration: none;
+            position: absolute;
+            right: 0;
+            top: 0;
+            color: #fff;
+            background-color: black;
+            width: 20px;
+            height: 20px;
+            font: 700 14px/20px "微软雅黑";
+            text-align: center;
+        }
+
+        .hide{
+            display: none !important;
+        }
+
+        .boxThird{
+            width: 100px;
+            height: 100px;
+            margin-left: 50px;
+            margin-top: 50px;
+        }
+
+        .boxFather{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            margin-top: 50px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h2>事件驱动案例</h2>
+    <h3>1.事件驱动简易案例1</h3>
+    <div class="father">
+        <div id="eventExample1" class="boxEvent" onclick="alertMsgFromEventFirst()"></div>
+        <div id="eventExample2" class="boxEvent2"></div>
+    </div>
+    <h3>2.事件驱动简易案例2</h3>
+    <div class="top-banner" id="banner">
+        <div class="w">
+            <img src="" alt="">
+            <a href="#" id="closeBanner">×</a>
+        </div>
+    </div>
+    <h3>3.事件驱动简易案例3</h3>
+    <div class="boxThird" id="moveEvent">
+    </div>
+    <hr>
+    <h2>DOM案例学习</h2>
+    <h3>案例1</h3>
+    <div id="boxFather" class="boxFather">
+        <div id="boxChild"></div>
+        <div id="box2"></div>
+    </div>
+    <h3>案例1--------节点属性</h3>
+    <div>
+        <img id="image" alt="灯泡" class="hehe" title="图片" src="图片/light_off.png">
+    </div>
+</body>
+</html>

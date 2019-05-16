@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS高级--client</title>
+    <script  src="022JS高级--client.js"></script>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+<h1 style="text-align: center;margin: 30px auto">三大家族——offset</h1>
+<p style="text-align: center;margin: 0 auto">包含: clientWidth,cilentHeight;clientLeft,clienyTop</p>
+
+<p>clientwidth clientHeight 不包括border和margin 等于  padding+width</p>
+
+<h5>width --- height</h5>
+<p>offset带border</p>
+<p>scroll不带border 内容宽高</p>
+<p>client不带border 可看见的区域</p>
+
+<h5>left --right</h5>
+<p>offset距离副盒子带有定位之间的距离</p>
+<p>scroll被卷去的部分</p>
+<p>client border的宽高</p>
+
+<!--
+     client兼容性问题：
+     ie9及其以上版本
+     window.innerWidth/window.innerHeight
+     标准模式[有DTD] ("CSS1Compat)
+     document.documentElement.clientWidth
+     document.documentElement.clientHeight
+     怪异模式（没有DTD）
+     document.body.clientWidth
+     document.body.clientHeight
+
+-->
+</body>
+</html>

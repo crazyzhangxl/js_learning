@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2侧广告案例</title>
+    <script src="018JS高级--2侧广告案例.js"></script>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            height: 5000px;
+        }
+
+        /**
+           记住做滑动的不允许写margin 不然会出错
+           top会加上一个值
+         */
+        #left{
+           position: absolute;
+            left: 0;
+            top: 50px;
+        }
+
+        #right{
+           position: absolute;
+            right: 0;
+            top: 50px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="left">
+        <img src="./图片/aside.jpg">
+    </div>
+    <div id="right">
+        <img src="./图片/aside.jpg">
+    </div>
+    <div>
+        <p style="margin: 0 auto;text-align: center">你是谁啊啊啊啊啊啊啊啊嗷嗷啊啊</p>
+    </div>
+</body>
+</html>

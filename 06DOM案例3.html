@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>O6DOM案例3</title>
+    <style type="text/css">
+        body,a,img,input,button,label,ul,li{
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .nodeSmall{
+            position: fixed;
+            top: 100px;
+            right: 0;
+        }
+
+        .titleFirst{
+            position: fixed;
+            top: 40px;
+            right: 10px;
+        }
+
+        .nodeSmall a{
+            float: right;
+        }
+
+        .erweima{
+            float: right;
+            margin-right: 20px;
+        }
+
+        .hide{
+            /**
+                display:none 表示此元素不被显示---
+                可以隐藏某个元素，且隐藏的元素不会占用任何空间。也就是说，该元素不但被隐藏了，
+                而且该元素原本占用的空间也会从页面布局中消失
+
+                visibility:hidden可以隐藏某个元素，但隐藏的元素仍需占用与未隐藏之前一样的空间。也就是说，
+                该元素虽然被隐藏了，但仍然会影响布局。
+             */
+            display: none;
+        }
+
+        .show{
+            display: block;
+        }
+
+        .inputDiv{
+
+        }
+
+        .inputDiv span{
+            display: inline-block;
+            width: 50px;
+        }
+
+        /* cursor:pointer  是一只手 哈哈哈 */
+
+
+        .inputDiv input[type = "text"]{
+            width: 150px;
+            height: 22px;
+            font: 500 14px/14px 微软雅黑;
+            color: red;
+        }
+
+        .inputDiv button{
+            margin-right: 8px;
+            padding: 3px 6px;
+            display: inline-block;
+        }
+
+        .pwdDiv{
+            margin-top: 5px;
+        }
+
+        .pwdDiv label{
+            position: absolute;
+            left: 61px;
+            top: 108px;
+            font-size: 12px;
+            color: #cccccc;
+            cursor: pointer;
+        }
+
+        .accountDiv label{
+            position: absolute;
+            left: 61px;
+            top: 77px;
+            font-size: 12px;
+            color: #cccccc;
+            cursor: pointer;
+        }
+
+        .error{
+            border: 1px red solid;
+        }
+
+        .right{
+            border: 1px black solid;
+        }
+
+        .tableStyle{
+            border-collapse: collapse;
+            text-align: center;
+            height: 200px;
+            margin-left: 20px;
+        }
+
+        .divTable th{
+            border: 1px black solid;
+
+        }
+
+        .divTable td{
+            border: 1px black solid;
+
+        }
+
+        .line1{
+            width: 50px;
+            padding: 8px;
+        }
+
+        .line2{
+            width: 140px;
+            padding: 8px;
+        }
+
+        .line3{
+            width: 80px;
+            padding: 8px;
+        }
+
+        .clotherBox{
+            width: 500px;
+            margin: 100px auto;
+            height: 400px;
+            border: 1px solid #cccccc;
+            background: grey;
+             /*超出的去掉*/
+            overflow: hidden;
+        }
+
+        .clotherBox ul{
+            /*取消前面的小圆点*/
+            list-style: none;
+            width: 600px;
+            height: 40px;
+        }
+
+        .clotherBox ul li{
+            cursor: pointer;
+            float: left;
+            width: 100px;
+            text-align: center;
+            font: 700 18px/40px "微软雅黑";
+            background: pink;
+        }
+
+        .clotherBox ul .liBackground{
+            background: yellow;
+        }
+
+        #tableBody tr{
+            cursor: pointer;
+        }
+
+        .inner{
+
+        }
+
+        /* ------- 属性叠加 ---------*/
+        .clotherBox span{
+            display: none;
+            width: 500px;
+            height: 360px;
+            background: yellow;
+            text-align: center;
+            font: 700 150px/360px "simsim";
+        }
+
+        .clotherBox .showLargeBox{
+            display: block;
+
+        }
+
+
+    </style>
+    <script src="06DOM案例3.js"></script>
+</head>
+<body>
+    <div class="titleFirst">
+        <h2>案例1 二维码</h2>
+    </div>
+    <div class="nodeSmall" id="node_small">
+        <a href="#" id="aTag" onclick="return false"><img src="./图片/carton1_small.jpg"></a>
+        <div class="erweima hide" id="erwei">
+            <img src="./图片/light_on.png" alt="图片" title="二维码">
+        </div>
+    </div>
+
+
+    <div>
+        <h2>案例2 文本框[获取光标立即删除内容]</h2>
+        <div class="inputDiv" id="inputDiv">
+            <div class="accountDiv">
+                <span>账号:</span>
+                <label for="accountInput" id="accountpwd">输入账号</label><input type="text" id="accountInput"> <button>禁用</button><button>解除</button><br>
+            </div>
+            <div class="pwdDiv">
+                <span>密码:</span>
+                <!--跳转作用-->
+                <label for="pwdInput" id="pwdLabel">输入密码</label><input type="text" id="pwdInput">
+            </div>
+            <div>
+               <input id="lastInput" class="right" placeholder="哇" value="你是谁" style="margin-left: 55px;margin-top: 10px;width: 150px;
+            height: 22px;
+            font: 500 14px/14px 微软雅黑;
+            color: red;
+            outline: none">
+            </div>
+        </div>
+    </div>
+
+    <div class="divTable">
+        <h2>案例3 表格全选与未全选事件</h2>
+        <table class="tableStyle">
+            <thead>
+                <tr style="background: blue">
+                    <th class="line1"><input type="checkbox" id="cbTotal"></th>
+                    <th class="line2">菜名</th>
+                    <th class="line3">饭店</th>
+                </tr>
+            </thead>
+
+            <tbody id="tableBody">
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>地三鲜</td>
+                    <td>田老师</td>
+                </tr>
+
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>西虹市炒鸡蛋</td>
+                    <td>田老师</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>土豆丝</td>
+                    <td>田老师</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <h2>案例4 ----- 选衣服 ----- </h2>
+        <div class="clotherBox" id="clotherBox">
+            <ul>
+                <li class="liBackground">鞋子</li>
+                <li>袜子</li>
+                <li>帽子</li>
+                <li>裤子</li>
+                <li>裙子</li>
+            </ul>
+            <div class="inner" id="inner">
+                <span class="showLargeBox">鞋子</span>
+                <span class="">袜子</span>
+                <span class="">帽子</span>
+                <span class="">裤子</span>
+                <span class="">裙子</span>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

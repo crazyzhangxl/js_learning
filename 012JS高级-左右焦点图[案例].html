@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12高级-左右焦点图[案例]</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        /* 外围加边框 ---- 空隙*/
+        .box{
+            width: 490px;
+            height: 170px;
+            margin: 100px auto;
+            padding: 5px;
+            border: 1px red solid;
+        }
+
+        /*
+          内部的操作盒子
+        */
+        .inner{
+            width: 490px;
+            height: 170px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* 这里为啥是 490*6 */
+        .inner ul{
+            width: 500%;
+            list-style: none;
+            position: absolute;
+            left: 0;
+        }
+
+        .inner li{
+            float: left;
+        }
+
+        .inner li img{
+            width: 490px;
+            height: 170px;
+            background-size: 490px 170px;
+        }
+
+        .square{
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+
+        .square span{
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            text-align: center;
+            margin: 0 3px;
+            line-height: 16px;
+        }
+
+        .square .current{
+            background-color: orange;
+            color: white;
+        }
+    </style>
+    <script src="012JS高级-焦点复习.js"></script>
+</head>
+<body>
+    <div class="box">
+        <div class="inner" id="inner">
+            <ul>
+                <li><img src="./图片/demo_12/1.jpg"></li>
+                <li><img src="./图片/demo_12/2.jpg"></li>
+                <li><img src="./图片/demo_12/3.jpg"></li>
+                <li><img src="./图片/demo_12/4.jpg"></li>
+                <li><img src="./图片/demo_12/5.jpg"></li>
+            </ul>
+            <div class="square" id="square">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

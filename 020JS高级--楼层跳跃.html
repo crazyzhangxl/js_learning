@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>楼层跳跃案例</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        .titleBox{
+            position: fixed;
+            top: 80px;
+            left: 40px;
+        }
+
+        ul{
+            list-style:none;
+
+        }
+
+        .titleBox li{
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border: 1px black solid;
+            /*高手-1px 高效规避---------*/
+            margin-top: -1px;
+            border-collapse: collapse;
+            cursor: pointer;
+        }
+
+        .content{
+            height: 600px;
+        }
+
+        .content ul{
+            height: 100%;
+        }
+
+        .content li{
+            height: 100%;
+        }
+    </style>
+    <script src="020JS高级--楼层跳跃.js"></script>
+
+</head>
+<body>
+    <div class="titleBox">
+        <ul id="titleDiv">
+            <li>鞋子</li>
+            <li>袜子</li>
+            <li>裤子</li>
+            <li>裙子</li>
+            <li>帽子</li>
+        </ul>
+    </div>
+    <div class="content">
+        <ul id="contentDiv">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>

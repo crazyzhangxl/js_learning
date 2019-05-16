@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05DOM案例2</title>
+    <script src="05DOM案例2.js"></script>
+    <style type="text/css">
+        body,ul,li,img,a{
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        .controlClass{
+            text-decoration: none;
+            color: red;
+            margin-left: 50px;
+            background: grey;
+            padding: 4px 15px;
+        }
+
+        .controlClass:hover{
+            color: green;
+        }
+
+        .imgClass{
+            margin-left: 30px;
+            margin-top: 10px;
+            width: 80px;
+            height: 80px;
+        }
+
+        .divImage{
+
+        }
+
+        .divImage li{
+            display: inline-block;
+        }
+
+        .divImage img{
+            margin-left: 20px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h2>[案例1]点击a链接,实现img图片切换</h2>
+    <div>
+        <a id="control" class="controlClass" href="#">关</a>
+    </div>
+    <div>
+        <img class="imgClass"  id="imgShow" src="图片/light_on.png">
+    </div>
+    <hr>
+    <h2>[案例2]画廊</h2>
+    <div class="divImage" id="divControl">
+        <ul>
+            <li>
+                <a href="./图片/carton1.jpg" title="卡通1">
+                    <img src="./图片/carton1_small.jpg" alt="x1">
+                </a>
+            </li>
+
+            <li>
+                <a href="./图片/carton2.jpg" title="卡通2">
+                    <img src="./图片/carton2_small.jpg" alt="x2">
+                </a>
+            </li>
+
+            <li>
+                <a href="./图片/carton1.jpg" title="卡通3">
+                    <img src="./图片/carton1_small.jpg" alt="x3">
+                </a>
+            </li>
+
+            <li>
+                <a href="./图片/carton2.jpg" title="卡通4">
+                    <img src="./图片/carton2_small.jpg" alt="x4">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <a href="#" onclick="return false">
+            <img  id="imageShow" src="./图片/white.jpg" width="450px"/>
+        </a>
+        <p id="des">选择图片吧</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>scroll基础学习</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        body{
+            height: 5000px;
+            width: 5000px;
+        }
+
+        #demo2Box{
+            width: 100px;
+            height: 100px;
+            background: #cccccc;
+            border: 1px red solid;
+            padding: 5px;
+        }
+    </style>
+    <script src="016JS高级--scroll.js"></script>
+</head>
+<body>
+    <h1 style="text-align: center;margin: 30px auto">三大家族——offset</h1>
+    <p style="text-align: center;margin: 0 auto">包含: scrollWidth,scrollHeight;scrollLeft,scrollTop;</p>
+
+    <div style="margin-top: 50px;margin-left: 50px">
+        <h2>案例1[滚动事件学习]</h2>
+        <p>window.onscroll() 检测窗口滑动</p>
+        </div>
+    </div>
+
+    <div style="margin-top: 50px;margin-left: 50px">
+        <h2>案例2[scrollWidth,scrollHeight]</h2>
+        <div id="demo2Box">
+            <div style="height: 120px;background: lime">
+            </div>
+        </div>
+        <div style="margin-top: 100px">
+            <p>描述,这是一个长宽 = 100px的盒子 其中padding = 5  外边线宽为1;内部又一个高120的容器</p>
+            <p id="scrollWidthP"></p>
+            <p id="scrollHeightP"></p>
+            <p id="result2"></p>
+        </div>
+    </div>
+    </div>
+
+    <div style="margin-top: 50px;margin-left: 50px">
+        <h2>案例3[scrollLeft,scrollTop]</h2>
+        <div>
+
+        </div>
+        <div style="margin-top: 100px">
+
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>

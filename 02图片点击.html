@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="02picture.js"></script>
+    <style type="text/css">
+        .text{
+            color: red;
+        }
+
+        .box{
+            background: green;
+            height: 80px;
+            width: 80px;
+            margin: 40px auto;
+            position: relative;
+        }
+
+        .box span{
+            position: absolute;
+            top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <img id="picture" src="图片/light_off.png" onclick="pictureClick()">
+    <p><span id="text" class="text">我是文本</span></p>
+    <button onclick="textClick()">点我改变颜色</button>
+    <div class="box" id="greenBox" onmouseover="boxIN()" onmouseout="boxOut()"><span id="sp_text">鼠标在外部</span></div>
+    <h1 onclick="alertText(this)">点我改变文字</h1>
+    <h1 onclick="measureSpec()">显示信息</h1>
+</body>
+</html>

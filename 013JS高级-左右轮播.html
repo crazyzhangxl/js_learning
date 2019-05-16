@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS高级左右轮播</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+
+
+        #box{
+            width: 490px;
+            height: 170px;
+            padding: 5px;
+            border: 1px red solid;
+            overflow: hidden;
+            margin: 100px auto;
+            position: relative;
+        }
+
+
+         #picContainer{
+            width: 490px;
+            height: 170px;
+             position: relative;
+             overflow: hidden;
+
+        }
+
+        #box ul{
+            list-style: none;
+            height: 170px;
+            width: 500%;
+            position: absolute;
+            left: 0;
+        }
+
+        #box li{
+           float: left;
+           width: 490px;
+           height: 170px;
+        }
+
+        #box li img{
+            width: 490px;
+            height: 170px;
+        }
+
+        #arr{
+            display: none;
+        }
+
+        #left{
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            margin-top: -20px;
+            background-color: #cccccc;
+            cursor: pointer;
+            line-height: 40px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+         #right{
+             width: 40px;
+             height: 40px;
+             position: absolute;
+             right: 5px;
+             top: 50%;
+             margin-top: -20px;
+             background-color: #cccccc;
+             cursor: pointer;
+             line-height: 40px;
+             text-align: center;
+             font-weight: bold;
+        }
+
+    </style>
+    <script src="013JS高级-左右轮播.js"></script>
+</head>
+<body>
+    <div id="box">
+        <div id="picContainer">
+            <ul>
+                <li><img src="./图片/demo_12/1.jpg"></li>
+                <li><img src="./图片/demo_12/2.jpg"></li>
+                <li><img src="./图片/demo_12/3.jpg"></li>
+                <li><img src="./图片/demo_12/4.jpg"></li>
+                <li><img src="./图片/demo_12/5.jpg"></li>
+            </ul>
+        </div>
+        <div id="arr">
+            <span id ="left">左边</span>
+            <span id="right">右边</span>
+        </div>
+    </div>
+</body>
+</html>

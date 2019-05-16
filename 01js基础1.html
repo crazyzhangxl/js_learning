@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js基础1</title>
+    <script src="01first_page.js"></script>
+    <style type="text/css">
+        #center_method_one{
+            background-color: red;
+            position: absolute;
+            margin: auto;
+            width: 70px;
+            top:50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .father{
+            margin-top: 60px;
+            background-color: lime;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            flex-direction: row;
+            /*垂直居中*/
+            align-items: center;
+            /*水平居中*/
+            justify-content: center;
+        }
+
+        .child{
+            background-color: red;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="febe()" value="你好" style="display: none">你是谁</button>
+    <div style="height: 100px;width:200px;background: lime;position: relative">
+        <div id="center_method_one">
+            <p>子布局</p>
+        </div>
+    </div>
+
+    <div class="father">
+        <div class="child">
+        </div>
+    </div>
+</body>
+
+</html>
+

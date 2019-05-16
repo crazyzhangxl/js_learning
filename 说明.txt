@@ -1,0 +1,34 @@
+js包含：ECMA 语法规范/ DOM 文档对象:提供一套完整的api /BOM 浏览器对象
+
+基本数据类型:
+  string boolean number
+复杂数据类型:
+  Array  Date Object RegExp String Number Boolran  (首字母大写 构造函数)
+
+两个空的类型:
+  null / undefined
+
+  var obj;
+  console.log(obj); output: undefined // 定义对象,但是未赋值
+  变量不可能为null,除非手动去赋值 解决对象占用空间
+
+
+  obj{
+    name:'zxl',
+    age:18
+  }
+
+
+  for(let k in obj){
+    console.log(k);  // name  age
+  }
+
+  console.log("name" in obj); true
+  console.log(name in onj); 抛出异常
+
+  var = [1,2,3];
+  console.log(0 in var); true
+  console.log("0" in var); true 隐式转换
+
+
+所谓的函数提升,那么提升的实际上是函数,对于变量的话,位置是特定的

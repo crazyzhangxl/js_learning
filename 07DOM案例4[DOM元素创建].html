@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>07DOM案例4</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .styleDiv{
+            width: 100px;
+            height: 100px;
+            background: red;
+            border: 1px red solid;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        #demo3Div li{
+            float: left;
+            width: 70px;
+            height: 30px;
+            font: 400 16px/25px "simsim";
+            color: red;
+            text-align: center;
+            background: grey;
+        }
+
+        .appleStyle{
+            color: pink;
+            font-size: 30px;
+            font-weight: 700;
+        }
+    </style>
+    <script src="tools.js"></script>
+    <script src="07DOM案例4.js"></script>
+</head>
+<body>
+    <div>
+        <h2>案例1-属性测试</h2>
+        <div class="styleDiv" id="styleDiv">
+        </div>
+    </div>
+
+    <div>
+        <!-- dom创建元素-->
+        <h2>案例2-元素创建基本api</h2>
+        <ul id="ulElement"></ul>
+    </div>
+
+    <div style="margin-top: 50px;margin-left: 50px">
+        <h2>案例3-元素创建简要案例</h2>
+        <!-- 创建添加元素 案例-->
+        <button id="demo3Btn" style="padding: 3px 8px;margin-top: 20px">创建列表</button>
+        <div id="demo3Div" style="margin-top: 20px">
+            <ul id="ulHoder"></ul>
+        </div>
+    </div>
+
+    <!-- 用于测试css样式-->
+    <div style="margin-top: 200px">
+        <ul>
+            <li>你是谁</li>
+        </ul>
+    </div>
+
+    <div style="margin-top: 50px;margin-left: 50px">
+        <h2>案例4-内置对象</h2>
+        <p style="margin-top: 15px"><span>new Date()当前时间返回字符:&nbsp;&nbsp;&nbsp;&nbsp;</span><span id="spanDateOne"></span></p>
+    </div>
+
+    <div style="margin-top: 50px;margin-left: 50px">
+        <h2 style="margin-bottom: 20px">案例5-苹果发布会倒计时案例</h2>
+        <span class="appleStyle">距离苹果发布会还有:&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="appleStyle" id="appleTime"></span>
+    </div>
+</body>
+</html>

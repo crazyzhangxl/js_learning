@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS高级</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        .demo1Div{
+            width: 100px;
+            height: 100px;
+            background: red;
+            padding: 10px;
+            border: 1px red solid;
+        }
+
+        .demo2Box1{
+            width: 300px;
+            height: 300px;
+            background: grey;
+            position: relative;
+            padding: 10px;
+            border: 1px black solid;
+        }
+
+        .demo2Box2{
+            width: 100px;
+            height: 100px;
+            background: green;
+            position: absolute;
+
+            padding: 10px;
+            border: 1px black solid;
+
+        }
+
+        .demo4Box{
+            width: 100px;
+            height: 100px;
+            background: grey;
+            border: 1px solid red;
+            padding: 5px;
+            position: relative;
+        }
+
+        #demo4Child{
+            width: 30px;
+            height: 30px;
+            background: red;
+            position: relative;
+            left: 2px;
+        }
+
+        .box{
+            width: 490px;
+            height: 170px;
+            padding: 5px;
+            border: 20px red solid;
+            overflow: hidden;
+            margin: 100px auto;
+            position: relative;
+            background: #cccccc;
+        }
+
+        .picContainer{
+            width: 490px;
+            height: 170px;
+            background: #ffffff;
+        }
+
+        .picContainerGood{
+            width: 490px;
+            height: 170px;
+            background:#00ff00;
+            position: absolute;
+        }
+
+        .childNext{
+            width: 490px;
+            height: 170px;
+            background: red;
+            position: absolute;
+            left: 0;
+        }
+    </style>
+    <script src="010JS高级-offset.js">
+
+    </script>
+</head>
+<body>
+    <h1>三大家族——offset</h1>
+    <p>包含: offsetWidth,offsetHeight;offsetLeft,offsetTop;offsetParent</p>
+
+    <div style="margin-top: 50px">
+        <h2>案例1[offsetwidth with offsetHeight]</h2>
+        <div id="demo1" class="demo1Div">
+        </div>
+    </div>
+
+    <div style="margin-top: 50px">
+        <h2>案例2[offsetLeft with offsetTop]</h2>
+        <div class="demo2Box1">
+            <div class="demo2Box2" id="demo2DivChild">
+
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 50px">
+        <h2>案例3[offsetParent]</h2>
+        <div class="demo2Box1">
+            <div class="demo2Box2" id="demo3Child">
+
+            </div>
+        </div>
+    </div>
+
+
+    <div style="margin-top: 50px">
+        <h2>案例4[实验]</h2>
+        <div class="demo4Box">
+            <div  id="demo4Child">
+
+            </div>
+        </div>
+    </div>
+
+
+    <!--
+     这是一个错误案例
+
+     这个就是之前出现的问题 那么他的相对位置是由父亲决定的
+        也就是childNext class相对于爷爷容器移动了 可是他的实际父亲并没有动
+        所以出现了问题
+    -->
+    <div style="margin-top: 50px">
+        <h2>案例5[实验2---错误的]</h2>
+        <div class="box">
+            <div class="picContainer">
+                <div class="childNext">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 50px">
+        <h2>案例6[实验2--正确的]</h2>
+        <p> 一个很重要的总结就是 当我们滑动的时候尽量保证我们的父亲是绝对纯洁的 即最好是没有padding的不然会造成一定的问题</p>
+        <div class="box">
+            <div class="picContainerGood">
+                <div class="childNext" id="demoNext">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

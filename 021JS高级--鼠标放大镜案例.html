@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标跟随案例</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .smallBox{
+            width: 350px;
+            height: 350px;
+            border: 1px black solid;
+            position: relative;
+            margin: 100px;
+        }
+
+        .bigBox{
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            top: 0;
+            left: 360px;
+            border: 1px solid black;
+            display: none;
+            overflow: hidden;
+        }
+
+        .mask{
+            width: 175px;
+            height: 175px;
+            background: rgba(255,255,0,0.4);
+            position: absolute;
+            left: 0;
+            top: 0;
+            cursor: move;
+            display: none;
+        }
+    </style>
+    <script src="021JS高级--鼠标放大镜案例.js"></script>
+</head>
+<body>
+    <div class="smallBox" id="smallBox">
+        <div class="small">
+            <img src="./图片/鼠标放大镜/001.jpg">
+            <div class="mask" id="maskDiv"></div>
+        </div>
+        <div class="bigBox" id="bigBox">
+            <img src="./图片/鼠标放大镜/0001.jpg">
+        </div>
+    </div>
+    <div>
+
+    </div>
+
+</body>
+</html>
